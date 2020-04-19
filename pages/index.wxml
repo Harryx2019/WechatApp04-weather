@@ -1,0 +1,41 @@
+<view class="container">
+  <!-- 区域1：地区选择器 -->
+  <view class="getLocation">
+    <button bindtap="getLocation">点击获取当前地址位置</button>
+  </view>
+  <picker mode='region' bindchange="changeRegion">
+    <view>{{region}}</view>
+  </picker>
+  <!-- 区域2： 文本区域 -->
+  <text>{{now.tmp}}°C {{now.cond_txt}}</text>
+  <!-- 区域3：图片区域 -->
+  <image src="/images/{{now.cond_code}}.png"></image>
+  <!-- 区域4：多行天气信息 -->
+  <view class="detail">
+    <view class="bar">
+      <view class="box">湿度</view>
+      <view class="box">气压</view>
+      <view class="box">能见度</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.hum}}%</view>
+      <view class="box">{{now.pres}} hPa</view>
+      <view class="box">{{now.vis}} Km</view>
+    </view>
+    <view class="bar">
+      <view class="box">风向</view>
+      <view class="box">风速</view>
+      <view class="box">风力</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.wind_dir}}</view>
+      <view class="box">{{now.wind_spd}} Km/h</view>
+      <view class="box">{{now.wind_sc}} 级</view>
+    </view>
+  </view>
+</view>
+
+<!-- 网络API:
+    和风天气：提供的API接口
+    根据网站的相关代码提示和接口信息制作URL
+    回到微信公众平台，添加服务器域名 -->

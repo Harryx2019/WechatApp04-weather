@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#3883FA",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "今日天气"
+  },
+  "permission":{
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  }
+}
